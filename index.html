@@ -3,9 +3,540 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Fooddy</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    Hello World!
+  <body class="bg-gray-100 text-gray-900">
+    <!-- Header -->
+    <header class="bg-black text-white">
+      <div
+        class="container mx-auto flex justify-center md:justify-between items-center py-4 px-6"
+      >
+        <nav class="hidden md:flex space-x-6">
+          <a href="#" class="hover:text-gray-400">About</a>
+          <a href="#" class="hover:text-gray-400">Contact</a>
+          <a href="#" class="hover:text-gray-400">Newsletter</a>
+        </nav>
+        <div class="text-center text-xl font-bold">Fooddy</div>
+        <nav class="hidden md:flex space-x-4">
+          <a href="#" class="hover:text-gray-400">FB</a>
+          <a href="#" class="hover:text-gray-400">TW</a>
+          <a href="#" class="hover:text-gray-400">IG</a>
+        </nav>
+      </div>
+      <nav class="hidden md:block bg-green-600 text-white">
+        <div
+          class="container mx-auto flex justify-between items-center py-2 px-6"
+        >
+          <ul class="flex space-x-6 font-medium">
+            <li><a href="#" class="hover:text-gray-300">Home</a></li>
+            <li><a href="#" class="hover:text-gray-300">Recipe Index</a></li>
+            <li><a href="#" class="hover:text-gray-300">Pages</a></li>
+            <li><a href="#" class="hover:text-gray-300">Appetizer</a></li>
+            <li><a href="#" class="hover:text-gray-300">Courses</a></li>
+            <li><a href="#" class="hover:text-gray-300">Shop</a></li>
+          </ul>
+          <div>
+            <input
+              type="text"
+              placeholder="Hit enter to search"
+              class="border borde-white p-2 text-black rounded"
+            />
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="relative bg-cover bg-center h-96 bg-fixed"
+      style="background-image: url('/assets/img/hero.jpg')"
+    >
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <div
+        class="container mx-auto flex flex-col items-center justify-center h-full relative text-white text-center"
+      >
+        <h1 class="text-4xl font-bold">Kitchen Essentials</h1>
+        <p class="mt-4">
+          Happiness is homemade and that the heart of any home is the kitchen.
+          Get my favourite kitchen tools!
+        </p>
+        <a
+          href="#"
+          class="mt-6 bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
+          >Checkout Shop</a
+        >
+      </div>
+    </section>
+    <hr
+      class="bg-gray-300 h-1 mt-10 mb-5 rounded-full w-20 mx-auto md:hidden"
+    />
+    <!-- Seasonal Recipes -->
+    <section class="container mx-auto md:py-16 text-center">
+      <h2 class="text-3xl font-bold mb-8">Seasonal Recipes</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <figure class="relative h-96">
+          <img
+            src="/assets/img/spaghetti.jpg"
+            alt="Recipe 1"
+            class="w-full h-full object-cover"
+          />
+          <figcaption
+            class="absolute inset-0 bg-black opacity-50 flex items-center justify-center text-white text-2xl font-bold"
+          >
+            The Best Spaghetti Meat Sauce
+          </figcaption>
+        </figure>
+        <figure class="relative h-96">
+          <img
+            src="/assets/img/avocado.jpg"
+            alt="Recipe 2"
+            class="w-full h-full object-cover"
+          />
+          <figcaption
+            class="absolute inset-0 bg-black opacity-50 flex items-center justify-center text-white text-2xl font-bold"
+          >
+            Perfect Avocado Toast for Breakfast
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Browse Popular Categories -->
+    <section class="container mx-auto md:py-16">
+      <h2 class="text-3xl font-bold text-center mb-8">
+        Browse Popular Categories
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8">
+        <figure class="flex flex-col items-center">
+          <img
+            src="/assets/img/appetizer.jpg"
+            alt="Appetizer"
+            class="rounded-full w-24 h-24"
+          />
+          <figcaption class="mt-2">Appetizer</figcaption>
+        </figure>
+        <figure class="flex flex-col items-center">
+          <img
+            src="/assets/img/beverages.jpg"
+            alt="Beverages"
+            class="rounded-full w-24 h-24"
+          />
+          <figcaption class="mt-2">Beverages</figcaption>
+        </figure>
+        <figure class="flex flex-col items-center">
+          <img
+            src="/assets/img/bread.jpg"
+            alt="Bread"
+            class="rounded-full w-24 h-24"
+          />
+          <figcaption class="mt-2">Bread</figcaption>
+        </figure>
+        <figure class="flex flex-col items-center">
+          <img
+            src="/assets/img/pasta.jpg"
+            alt="Pasta"
+            class="rounded-full w-24 h-24"
+          />
+          <figcaption class="mt-2">Pasta</figcaption>
+        </figure>
+        <figure class="flex flex-col items-center">
+          <img
+            src="/assets/img/salad.jpg"
+            alt="Salad"
+            class="rounded-full w-24 h-24"
+          />
+          <figcaption class="mt-2">Salad</figcaption>
+        </figure>
+        <figure class="flex flex-col items-center">
+          <img
+            src="/assets/img/soup.jpg"
+            alt="Soup"
+            class="rounded-full w-24 h-24"
+          />
+          <figcaption class="mt-2">Soup</figcaption>
+        </figure>
+        <figure class="flex flex-col items-center">
+          <img
+            src="/assets/img/sweet.jpg"
+            alt="Sweet"
+            class="rounded-full w-24 h-24"
+          />
+          <figcaption class="mt-2">Sweet</figcaption>
+        </figure>
+        <figure class="flex flex-col items-center">
+          <img
+            src="/assets/img/vegan.jpg"
+            alt="Vegan"
+            class="rounded-full w-24 h-24"
+          />
+          <figcaption class="mt-2">Vegan</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-8 px-4 md:flex lg:space-x-8">
+      <!-- Latest Recipes -->
+      <section class="lg:w-4/5">
+        <h2 class="text-2xl font-bold mb-6">Latest Recipes</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Recipe Card -->
+          <article class="bg-white shadow-md rounded overflow-hidden">
+            <figure class="h-96 overflow-hidden">
+              <img
+                src="/assets/img/blue-berry.jpg"
+                alt="Recipe 1"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-2">
+                Brain Power Blueberry Smoothie
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                nisl eros, pulvinar facilisis justo mollis, auctor consequat
+                urna.
+              </p>
+              <a href="#" class="text-green-500 hover:underline">Read more</a>
+            </div>
+          </article>
+          <!-- Recipe Card -->
+          <article class="bg-white shadow-md rounded overflow-hidden">
+            <figure class="h-96 overflow-hidden">
+              <img
+                src="/assets/img/rose-syrup.jpg"
+                alt="Recipe 2"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-2">Rose Syrup Ice Tea</h3>
+              <p class="text-gray-600 mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                nisl eros, pulvinar facilisis justo mollis, auctor consequat
+                urna.
+              </p>
+              <a href="#" class="text-green-500 hover:underline">Read more</a>
+            </div>
+          </article>
+          <!-- Recipe Card -->
+          <article class="bg-white shadow-md rounded overflow-hidden">
+            <figure class="h-96 overflow-hidden">
+              <img
+                src="/assets/img/blue-berry.jpg"
+                alt="Recipe 1"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-2">
+                Brain Power Blueberry Smoothie
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                nisl eros, pulvinar facilisis justo mollis, auctor consequat
+                urna.
+              </p>
+              <a href="#" class="text-green-500 hover:underline">Read more</a>
+            </div>
+          </article>
+          <!-- Recipe Card -->
+          <article class="bg-white shadow-md rounded overflow-hidden">
+            <figure class="h-96 overflow-hidden">
+              <img
+                src="/assets/img/rose-syrup.jpg"
+                alt="Recipe 2"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-2">Rose Syrup Ice Tea</h3>
+              <p class="text-gray-600 mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                nisl eros, pulvinar facilisis justo mollis, auctor consequat
+                urna.
+              </p>
+              <a href="#" class="text-green-500 hover:underline">Read more</a>
+            </div>
+          </article>
+          <!-- Recipe Card -->
+          <article class="bg-white shadow-md rounded overflow-hidden">
+            <figure class="h-96 overflow-hidden">
+              <img
+                src="/assets/img/blue-berry.jpg"
+                alt="Recipe 1"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-2">
+                Brain Power Blueberry Smoothie
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                nisl eros, pulvinar facilisis justo mollis, auctor consequat
+                urna.
+              </p>
+              <a href="#" class="text-green-500 hover:underline">Read more</a>
+            </div>
+          </article>
+          <!-- Recipe Card -->
+          <article class="bg-white shadow-md rounded overflow-hidden">
+            <figure class="h-96 overflow-hidden">
+              <img
+                src="/assets/img/rose-syrup.jpg"
+                alt="Recipe 2"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+            <div class="p-4">
+              <h3 class="text-xl font-semibold mb-2">Rose Syrup Ice Tea</h3>
+              <p class="text-gray-600 mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                nisl eros, pulvinar facilisis justo mollis, auctor consequat
+                urna.
+              </p>
+              <a href="#" class="text-green-500 hover:underline">Read more</a>
+            </div>
+          </article>
+        </div>
+        <div class="text-center mt-8">
+          <button
+            class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
+          >
+            Load More Posts
+          </button>
+        </div>
+      </section>
+
+      <!-- Sidebar -->
+      <aside class="lg:w-1/5 pt-14 space-y-5">
+        <div class="">
+          <img
+            src="/assets/img/cookbook.png"
+            alt="Cook Book"
+            class="w-full mb-4"
+          />
+        </div>
+        <div class="bg-white p-2">
+          <h3
+            class="uppercase border border-green-500 text-center text-gray-600 font-semibold p-2"
+          >
+            Vegan Recipes
+          </h3>
+          <div class="space-y-5 py-5">
+            <div class="grid grid-cols-3 items-center gap-4">
+              <figure class="w-20 h-20 overflow-hidden rounded-full">
+                <img src="/assets/img/vegan.jpg" alt="vegan" />
+              </figure>
+              <div class="col-span-2">
+                <a href="">
+                  <h5 class="font-medium">Picked Summer Vegetables</h5>
+                </a>
+                <time class="text-sm text-gray-600">March 19, 2024</time>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 items-center gap-4">
+              <figure class="w-20 h-20 overflow-hidden rounded-full">
+                <img src="/assets/img/avocado.jpg" alt="avocado" />
+              </figure>
+              <div class="col-span-2">
+                <a href="">
+                  <h5 class="font-medium">
+                    Perfect avocado toast for breakfast
+                  </h5>
+                </a>
+                <time class="text-sm text-gray-600">March 19, 2024</time>
+              </div>
+            </div>
+            <div class="grid grid-cols-3 items-center gap-4">
+              <figure class="w-20 h-20 overflow-hidden rounded-full">
+                <img src="/assets/img/appetizer.jpg" alt="Appetizer" />
+              </figure>
+              <div class="col-span-2">
+                <a href="">
+                  <h5 class="font-medium">Flat Irons Skillet Potatoes</h5>
+                </a>
+                <time class="text-sm text-gray-600">March 19, 2024</time>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white shadow-md rounded p-4 mb-8">
+          <h3 class="text-xl font-bold mb-4">Never Miss A Recipe!</h3>
+          <p class="text-gray-600 mb-4">
+            Join thousands of Fooddy subscribers and get our best recipes
+            delivered each week!
+          </p>
+          <form>
+            <input
+              type="email"
+              placeholder="Your Email Address"
+              class="p-2 w-full rounded mb-4 border border-green-500"
+            />
+            <button
+              type="submit"
+              class="bg-green-500 text-white py-2 px-4 rounded w-full hover:bg-green-600"
+            >
+              Subscribe
+            </button>
+          </form>
+          <div class="mt-4">
+            <input type="checkbox" id="terms" class="mr-2" />
+            <label for="terms"
+              >I have read and agree to the
+              <a href="#" class="text-green-500 hover:underline"
+                >terms & conditions</a
+              ></label
+            >
+          </div>
+        </div>
+      </aside>
+    </main>
+    <!-- Featured Recipe -->
+    <section
+      class="relative container mx-auto bg-cover bg-center h-96 text-center"
+      style="background-image: url('/assets/img/pot.png')"
+    >
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <div
+        class="container mx-auto flex flex-col items-center justify-center h-full relative text-white"
+      >
+        <h2 class="text-2xl font-bold">Make This Today!</h2>
+        <h1 class="text-4xl font-bold mt-2">8 Easy Instant Pot Recipes</h1>
+        <a
+          href="#"
+          class="mt-6 bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
+          >Read more</a
+        >
+      </div>
+    </section>
+    <!-- Perfect for This Season -->
+    <section class="container mx-auto py-10 md:py-16">
+      <h2 class="text-3xl font-bold text-center mb-8">
+        Perfect for This Season
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Recipe Card -->
+        <article class="bg-white shadow-md rounded overflow-hidden">
+          <figure class="h-96 overflow-hidden">
+            <img
+              src="/assets/img/spaghetti.jpg"
+              alt="Recipe 1"
+              class="w-full h-full object-cover"
+            />
+          </figure>
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">
+              The Best Spaghetti Meat Sauce
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <a href="#" class="text-green-500 hover:underline">Read more</a>
+          </div>
+        </article>
+        <!-- Recipe Card -->
+        <article class="bg-white shadow-md rounded overflow-hidden">
+          <figure class="h-96 overflow-hidden">
+            <img
+              src="/assets/img/sweet.jpg"
+              alt="Recipe 1"
+              class="w-full h-full object-cover"
+            />
+          </figure>
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">
+              Enjoy Molten Chocolate Cake
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <a href="#" class="text-green-500 hover:underline">Read more</a>
+          </div>
+        </article>
+        <!-- Recipe Card -->
+        <article class="bg-white shadow-md rounded overflow-hidden">
+          <figure class="h-96 overflow-hidden">
+            <img
+              src="/assets/img/soup.jpg"
+              alt="Recipe 1"
+              class="w-full h-full object-cover"
+            />
+          </figure>
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Soup for midnight movie</h3>
+            <p class="text-gray-600 mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <a href="#" class="text-green-500 hover:underline">Read more</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Subscription Form -->
+    <section
+      class="bg-black bg-blend-overlay bg-opacity-40 py-16 bg-center bg-cover text-center"
+      style="
+        background-image: url('https://tinysalt.loftocean.com/elementor/wp-content/uploads/sites/4/2022/08/lum3n-RYqO8DhPg68-unsplash.jpg');
+      "
+    >
+      <div
+        class="container mx-auto px-4 flex flex-col items-center md:items-start text-white"
+      >
+        <h2 class="text-3xl font-bold mb-4">Never Miss A Recipe!</h2>
+        <p class="mb-8">
+          Join thousands of Fooddy subscribers and get our best recipes
+          delivered each week!
+        </p>
+        <form
+          class="flex flex-col md:flex-row md:items-center justify-center space-y-4 md:space-y-0 md:space-x-4 w-full md:w-max"
+        >
+          <input
+            type="email"
+            placeholder="Your Email Address"
+            class="p-4 rounded w-full md:w-96"
+          />
+          <button
+            type="submit"
+            class="bg-green-500 text-white py-4 px-8 rounded hover:bg-green-600"
+          >
+            Subscribe
+          </button>
+        </form>
+        <div class="mt-4 w-full">
+          <input
+            type="checkbox"
+            id="footer-terms"
+            class="mr-2 cursor-pointer"
+          />
+          <label for="footer-terms" class="cursor-pointer"
+            >I have read and agree to the
+            <a href="#" class="text-green-400 hover:underline"
+              >terms & conditions</a
+            ></label
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8">
+      <div
+        class="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0"
+      >
+        <nav class="flex space-x-6">
+          <a href="#" class="hover:text-gray-400">Privacy Policy</a>
+          <a href="#" class="hover:text-gray-400">Contact</a>
+        </nav>
+        <p>&copy; 2024 Fooddy Studio. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
