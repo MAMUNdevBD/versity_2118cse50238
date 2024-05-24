@@ -8,30 +8,108 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("menu");
+        menu.classList.toggle("w-0");
+        menu.classList.toggle("w-screen");
+      }
+    </script>
   </head>
-  <body class="bg-gray-100 text-gray-900">
+  <body class="bg-gray-50 text-gray-900">
     <!-- Header -->
     <header class="bg-black text-white">
-      <div
-        class="container mx-auto flex justify-center md:justify-between items-center py-4 px-6"
-      >
+      <div class="container mx-auto grid grid-cols-3 items-center py-4 px-6">
         <nav class="hidden md:flex space-x-6">
           <a href="#" class="hover:text-gray-400">About</a>
           <a href="#" class="hover:text-gray-400">Contact</a>
           <a href="#" class="hover:text-gray-400">Newsletter</a>
         </nav>
+        <button class="fill-white md:hidden" onclick="toggleMenu()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-menu"
+          >
+            <line x1="4" x2="20" y1="12" y2="12" />
+            <line x1="4" x2="20" y1="6" y2="6" />
+            <line x1="4" x2="20" y1="18" y2="18" />
+          </svg>
+        </button>
         <div class="text-center text-xl font-bold">Fooddy</div>
-        <nav class="hidden md:flex space-x-4">
-          <a href="#" class="hover:text-gray-400">FB</a>
-          <a href="#" class="hover:text-gray-400">TW</a>
-          <a href="#" class="hover:text-gray-400">IG</a>
+        <nav class="hidden md:flex space-x-4 justify-end">
+          <a href="#" class="hover:text-gray-400"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-facebook"
+            >
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="hover:text-gray-400">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-twitter"
+            >
+              <path
+                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="hover:text-gray-400">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-youtube"
+            >
+              <path
+                d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"
+              />
+              <path d="m10 15 5-3-5-3z" />
+            </svg>
+          </a>
         </nav>
       </div>
-      <nav class="hidden md:block bg-green-600 text-white">
+      <nav
+        id="menu"
+        class="absolute md:static w-0 md:w-full overflow-hidden transition-all h-screen md:h-auto top-0 z-50 md:block bg-green-600 text-white"
+      >
         <div
-          class="container mx-auto flex justify-between items-center py-2 px-6"
+          class="container mx-auto flex flex-col-reverse md:flex-row justify-between md:items-center md:py-2 px-6 gap-5"
         >
-          <ul class="flex space-x-6 font-medium">
+          <ul class="flex flex-col md:flex-row font-medium gap-5">
             <li><a href="#" class="hover:text-gray-300">Home</a></li>
             <li><a href="#" class="hover:text-gray-300">Recipe Index</a></li>
             <li><a href="#" class="hover:text-gray-300">Pages</a></li>
@@ -45,6 +123,9 @@
               placeholder="Hit enter to search"
               class="border borde-white p-2 text-black rounded"
             />
+          </div>
+          <div class="flex justify-end pt-5 md:hidden">
+            <button onclick="toggleMenu()">Close</button>
           </div>
         </div>
       </nav>
@@ -106,7 +187,7 @@
     </section>
 
     <!-- Browse Popular Categories -->
-    <section class="container mx-auto md:py-16">
+    <section class="container mx-auto py-10 md:pb-16">
       <h2 class="text-3xl font-bold text-center mb-8">
         Browse Popular Categories
       </h2>
@@ -400,7 +481,7 @@
     </main>
     <!-- Featured Recipe -->
     <section
-      class="relative container mx-auto bg-cover bg-center h-96 text-center"
+      class="relative container mx-auto bg-cover bg-center h-96 text-center md:mt-5"
       style="background-image: url('/assets/img/pot.png')"
     >
       <div class="absolute inset-0 bg-black opacity-50"></div>
@@ -510,7 +591,7 @@
             Subscribe
           </button>
         </form>
-        <div class="mt-4 w-full">
+        <div class="mt-4 w-full text-left text-sm md:text-base">
           <input
             type="checkbox"
             id="footer-terms"
